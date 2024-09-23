@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mashood Ecomerce clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>     
+</head>
+<style>
+ .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+</style>
+<body>
+    <nav class="bg-gray-900 text-white p-3">
+        <div class="container mx-auto flex items-center justify-between">
+            <div style="display: flex;justify-content: space-between;">
+            <a href="#" class="text-xl font-semibold">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Logo" class="h-6 inline" style="background-color: white;height: 40px; padding-top: 10px;padding-right: 7px;padding-left: 7px;padding-bottom: 7px; border-radius: 10px;">
+            </a>
+        </div>
+             <div class="flex items-center">
+                 <button id="menu-toggle" class="lg:hidden text-white mr-4 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+            </div>
+
+             <div class="hidden lg:flex items-center w-1/2">
+                <input  type="text" placeholder="Search Amazon" class="w-full px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none">
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-r-md">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.9 14.32A8 8 0 1114.32 12.9l4.387 4.387a1 1 0 01-1.414 1.414l-4.387-4.387zm-2.56-9.908a6 6 0 100 12 6 6 0 000-12z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+
+             <div class="hidden lg:flex items-center space-x-6">
+                 <div>
+                    <p class="text-xs">Deliver to</p>
+                    <p class="font-semibold">Pakistan</p>
+                </div>
+                 <div class="space-x-4">
+                    <a href="#" class="hover:underline">EN</a>
+                    <a href="#" class="hover:underline">Hello, sign in<br><span class="font-semibold">Account & Lists</span></a>
+                    <a href="#" class="hover:underline">Returns<br><span class="font-semibold">& Orders</span></a>
+                </div>
+                 <a href="#" class="relative hover:underline">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L6.4 16h10.2l-.6 3H7l.6-3M7 13h10M7 13H5l-.6 3m13.2-3l.6-3H21M6 22a1 1 0 100-2 1 1 0 000 2zm12 0a1 1 0 100-2 1 1 0 000 2z"></path>
+                    </svg>
+                    <span class="absolute top-0 right-0 bg-yellow-500 text-black rounded-full px-1 text-xs">0</span>
+                </a>
+            </div>
+        </div>
+
+         <div id="mobile-menu" class="lg:hidden hidden mt-3">
+            <div class="space-y-2">
+                <a href="#" class="block text-white hover:underline">Today's Deals</a>
+                <a href="#" class="block text-white hover:underline">Customer Service</a>
+                <a href="#" class="block text-white hover:underline">Registry</a>
+                <a href="#" class="block text-white hover:underline">Gift Cards</a>
+                <a href="#" class="block text-white hover:underline">Sell</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // JavaScript to toggle mobile menu visibility
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <br />
+     <div id="categories" class="cards-container">
+     </div>
+
+     <br />
+
+
+     <footer class="bg-gray-900 text-gray-400 py-10">
+        <div class="container mx-auto px-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Logo" class="h-6 inline" style="background-color: white;height: 40px; padding-top: 10px;padding-right: 7px;padding-left: 7px;padding-bottom: 7px; border-radius: 10px;">
+            <br />
+            <br />
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+             <div>
+              <h3 class="text-white font-bold mb-4">Get to Know Us</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="hover:underline">Careers</a></li>
+                <li><a href="#" class="hover:underline">Blog</a></li>
+                <li><a href="#" class="hover:underline">About Us</a></li>
+                <li><a href="#" class="hover:underline">Investor Relations</a></li>
+                <li><a href="#" class="hover:underline">Our Devices</a></li>
+                <li><a href="#" class="hover:underline">Our Science</a></li>
+              </ul>
+            </div>
+    
+             <div>
+              <h3 class="text-white font-bold mb-4">Make Money with Us</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="hover:underline">Sell on Our Platform</a></li>
+                <li><a href="#" class="hover:underline">Sell on Business</a></li>
+                <li><a href="#" class="hover:underline">Become an Affiliate</a></li>
+                <li><a href="#" class="hover:underline">Advertise Your Products</a></li>
+                <li><a href="#" class="hover:underline">Self-Publish with Us</a></li>
+                <li><a href="#" class="hover:underline">Host a Hub</a></li>
+              </ul>
+            </div>
+    
+             <div>
+              <h3 class="text-white font-bold mb-4">Payment Products</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="hover:underline">Business Card</a></li>
+                <li><a href="#" class="hover:underline">Shop with Points</a></li>
+                <li><a href="#" class="hover:underline">Reload Your Balance</a></li>
+                <li><a href="#" class="hover:underline">Currency Converter</a></li>
+              </ul>
+            </div>
+    
+            <!-- Column 4: Let Us Help You -->
+            <div>
+              <h3 class="text-white font-bold mb-4">Let Us Help You</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="hover:underline">COVID-19</a></li>
+                <li><a href="#" class="hover:underline">Your Account</a></li>
+                <li><a href="#" class="hover:underline">Your Orders</a></li>
+                <li><a href="#" class="hover:underline">Shipping Rates & Policies</a></li>
+                <li><a href="#" class="hover:underline">Returns & Replacements</a></li>
+                <li><a href="#" class="hover:underline">Manage Devices</a></li>
+                <li><a href="#" class="hover:underline">Help</a></li>
+              </ul>
+            </div>
+    
+          </div>
+    
+           <div class="mt-10 border-t border-gray-700 pt-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-white font-semibold mb-4 sm:mb-0">© 2024  Mashood. All Rights Reserved.</div>
+            
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:underline">English</a>
+              <a href="#" class="text-gray-400 hover:underline">$ USD - U.S. Dollar</a>
+              <a href="#" class="text-gray-400 hover:underline">United States</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+      
+
+    <script src="index.js"></script>
+</body>
+</html>
